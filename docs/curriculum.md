@@ -173,6 +173,31 @@ AIに「改善」させるのではなく、守るべき設計意図を明示し
 
 ---
 
+## 11 静的UI契約・インタラクション・演出レイヤー
+
+### 学ぶこと
+- 紙プロトタイプを視覚仕様書として使う
+- visual bounds / hit bounds
+- 契約実装
+- 静止画だけでは足りなくなる境界
+- state / transition / progress
+- component state / SceneState
+- keyframe / invariant
+- 離散状態と連続状態
+- 演出レイヤー
+- リッチさとインタラクション複雑性の分離
+
+### できるようになること
+静的UIを可能な範囲まで契約化し、動的UIだけを状態設計へ切り替えられる。
+
+また、複数コンポーネントの連動が増えたときに、個別状態のまま扱うかSceneStateへ昇格させるかを判断できる。
+
+背景動画・装飾キャラクター・パーティクル等を、機能やレイアウトから独立した演出として分離できる。
+
+詳細: [../chapters/11-static-contract-interaction-effects.md](../chapters/11-static-contract-interaction-effects.md)
+
+---
+
 # 想定学習レベル
 
 ## Level 1: 用語が分かる
