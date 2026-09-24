@@ -58,8 +58,21 @@ HTML/CSSやFigmaの操作経験は必須ではありません。
 | 08 | レスポンシブ | priority, reflow, constraints, preservation |
 | 09 | UIレビュー | observation, diagnosis, cause, correction |
 | 10 | AIへの指示 | constraints, invariants, reference fidelity |
+| 11 | 静的UI契約と動的表現 | paper prototype, visual/hit bounds, state, SceneState, effects |
 
 詳細は [docs/curriculum.md](docs/curriculum.md) を参照してください。
+
+## 実装への橋渡し
+
+Design FEでは、デザインを「見た目の参考資料」のまま実装へ渡さず、次の3層へ分けて扱います。
+
+1. **静的UI契約** — 紙プロトタイプ等で位置・比率・余白・タップ領域まで決め、実装は再現にする
+2. **インタラクション仕様** — 状態、遷移、連動、不変条件を設計する
+3. **演出レイヤー** — 背景動画や装飾キャラクターなど、なくても機能する動きを本体UIから分離する
+
+静的部分は可能な限り契約化し、動的部分だけを状態設計へ切り替えることで、AIや実装者に不要なデザイン判断を残さないことを狙います。
+
+[chapters/11-static-contract-interaction-effects.md](chapters/11-static-contract-interaction-effects.md)
 
 ## 学び方
 
@@ -76,14 +89,10 @@ HTML/CSSやFigmaの操作経験は必須ではありません。
 
 ## 午後問題
 
-知識問題だけではなく、スクリーンショット比較型の演習を用意します。
+知識問題だけではなく、スクリーンショット比較型・設計判断型の演習を用意します。
 
-例：
-
-> 左図から右図への変更で、案内役の存在感が低下した。  
-> 関連するデザイン原則を2つ挙げ、原因と修正方針を100字程度で説明せよ。
-
-[exams/practical-01.md](exams/practical-01.md)
+- [午後問題01 — 原案との差分を診断する](exams/practical-01.md)
+- [午後問題02 — 静的契約と動的UIの境界](exams/practical-02.md)
 
 ## このリポジトリで扱わないこと
 
